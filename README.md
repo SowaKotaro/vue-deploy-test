@@ -1,4 +1,1 @@
-# 100pon-knocks
-NLP 100 knocks using various languages
-
-URL:https://nlp100.github.io/ja/
+これはVue.jsのWebアプリケーションが適切に本番環境にデプロイできるかを確認するために用意されたリポジトリです。
