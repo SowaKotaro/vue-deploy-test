@@ -12,7 +12,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/api/message")
+@app.get("/message")
 def get_message():
     number = 123
-    return {"message": "Hello from FastAPI!" + (str(number))}
+    return {"message": f"Hello from FastAPI! {number}"}
