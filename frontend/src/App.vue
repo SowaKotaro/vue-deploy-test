@@ -16,7 +16,8 @@ const fetchMessage = async () => {
     // The request URL should be the address of your FastAPI backend.
     // When using Docker, this will likely be the name of the backend service.
     // For local development, it might be http://localhost:8000
-    const response = await axios.get('/vue-deploy-test/api/message');
+    // const response = await axios.get(`http://localhost:8000/message`);
+    const response = await axios.get(`${import.meta.env.VITE_API_URL}/message`);
     message.value = response.data.message;
   } catch (error) {
     console.error('Error fetching message:', error);

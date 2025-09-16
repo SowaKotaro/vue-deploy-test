@@ -12,7 +12,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+click_count = 0
+
 @app.get("/message")
 def get_message():
-    number = 123
-    return {"message": f"Hello from FastAPI! {number}"}
+    global click_count
+    click_count += 1
+    return {"message": f"Hello from FastAPI! Click count: {click_count}"}
